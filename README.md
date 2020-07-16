@@ -8,5 +8,5 @@ The Connectome Workbench software is used to display the human brain surface. Th
 The code files included:
 cal_corr_direction_human.m: the script to project human input data onto a direction and calculate time-position correlation within each segment.  
 cal_corr_direction_monkey.m: the script to project monkey input data onto a direction and calcualte time-position correlation within each segment.
-cal_ave_seg.m: the script to average segments with propagation.  
+cal_pd.m: the script to calculate the principal delay profile.  
 
