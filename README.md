@@ -4,7 +4,7 @@ Edited by Yameng Gu from the Pennsylvania State University.
 Please send questions or feedback to ymgu95@gmail.com.  
 
 The input data from human is publicly available at http://www.humanconnectome.org/data.  
-The input data from monkey is publicly available at hhttp://neurotycho.org/anesthesia-and-sleep-task.  
+The input data from monkey is publicly available at http://neurotycho.org/anesthesia-and-sleep-task.  
 The MATLAB package is used to read HCP cifit data into matlab: http://www.fieldtriptoolbox.org.  
 The Connectome Workbench software is used to display the human brain surface. The software is open source and freely available at http://www.humanconnectome.org/software/connectome-workbench.  
 
