@@ -1,5 +1,5 @@
 # the-cross-hierarchy-propagation
-This includes the MATLAB code for the article "Brain activity fluctuations propagate as waves traversing the cortical hierarchy".  
+This includes the MATLAB code script and related data file for the article "Brain activity fluctuations propagate as waves traversing the cortical hierarchy".  
 Edited by Yameng Gu from the Pennsylvania State University.  
 Please send questions or feedback to ymgu95@gmail.com.  
 
