@@ -19,4 +19,5 @@ surf_bottom_up_ave_zscore.dtseries.nii: the avearged surface segments with botto
 surf_top_down_ave_zscore.dtseries.nii: the averages surface segments with top-down propagations in human resting-state functional MRI. 
 volume_top_down_ave_zscore.zip: the averages volume segments with top-down propagations in human resting-state functional MRI. The segment is centered at the global peak and converted to z-scored map, with a length of 21 time points. The 11th time point represent time zero.  
 volume_bottom_up_ave_zscore.zip: the averages volume segments with bottom-up propagations in human resting-state functional MRI. 
+pg1.dtseries.nii: the first component of the principal gradient from Margulies et al, PNAS, 2016. For more components, please see https://github.com/NeuroanatomyAndConnectivity/gradient_analysis.
 
