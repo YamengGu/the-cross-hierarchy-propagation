@@ -12,6 +12,8 @@ The script folder includes:
 cal_corr_seg_human.m: the script to project human input data onto a direction and calculate time-position correlation across time segments.  
 cal_corr_seg_monkey.m: the script to project monkey input data onto a direction and calcualte time-position correlation across time segments.  
 cal_pd.m: the script to calculate the principal delay profile.  
+FT_Filter_mulch2: filtering signal.
+function inpaint_nans can be found at https://www.mathworks.com/matlabcentral/fileexchange/4551-inpaint_nans.
 
 The data folder includes:  
 human_pd_unit_sec.dtseries.nii: the human principal delay profile with a unit of sec on the brain surface.  
