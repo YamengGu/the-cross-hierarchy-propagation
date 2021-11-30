@@ -14,11 +14,11 @@ epi1msk = FT_Filter_mulch2(dtser',[0.001 .1]/.694444)'; % temporally smoothing d
 epi1msk = zscore(epi1msk')';
 gs_LR1 = mean(epi1msk); % calculate the global mean of input data
 
-num_bins = 70;
+num_bins = 70; # number of bins
 
 pgd1 = discretize(pg1,prctile(pg1,0:100/num_bins:100));
 pgd1 = pgd1-min(pgd1)+1;
-tw1 = grpstats(epi1msk,pgd1); % the time-position plot (tw1) along the brain map
+tw1 = grpstats(epi1msk,pgd1); % tw1: time-position graph along the brain map
 
 %% find delay of local peaks relative to global peak at each position: idx_tem_prin
 [gls_neg_pk,locs] = findpeaks(-double(gs_LR1));
@@ -71,7 +71,7 @@ end
 
 end
 
-% calcualte speed
+% calcualte propagation speed
 x_ax = 1:num_bins;
 idx = isnan(idx_tem_prin);
 coefficients = polyfit(idx_tem_prin(~idx),x_ax(~idx)', 1);
