@@ -14,7 +14,9 @@ epi1msk = FT_Filter_mulch2(dtser',[0.001 .1]/.694444)'; % temporally smoothing d
 epi1msk = zscore(epi1msk')';
 gs_LR1 = mean(epi1msk); % calculate the global mean of input data
 
-pgd1 = discretize(pg1,prctile(pg1,0:100/70:100));
+num_bins = 70;
+
+pgd1 = discretize(pg1,prctile(pg1,0:100/num_bins:100));
 pgd1 = pgd1-min(pgd1)+1;
 tw1 = grpstats(epi1msk,pgd1); % the time-position plot (tw1) along the brain map
 
@@ -61,7 +63,7 @@ clear x_ax
 x_ax = (0:(sz(ln)-1)/size(idx_tem_prin,1):(sz(ln)-1));
 x_ax = x_ax(1:end-1);
 
-if sum(isnan(idx_tem_prin(:,ln)))>14
+if sum(isnan(idx_tem_prin(:,ln)))>num_bins*0.2
     rval_prin_2(ln) = nan;
 else    
 [rval_prin_2(ln),~] = corr((x_ax)',idx_tem_prin(:,ln),'rows','pairwise');
@@ -69,9 +71,17 @@ end
 
 end
 
-   
+% calcualte speed
+x_ax = 1:num_bins;
+idx = isnan(idx_tem_prin);
+coefficients = polyfit(idx_tem_prin(~idx),x_ax(~idx)', 1);
+geodesic_distance = 80; % geodesic distance on the cortical surface between sensorimotor and DMN is 80 mm based on Margulies, PNAS, 2016
+tr_data = 0.72; % TR of used HCP data is 0.72
+sped_seg = abs(coefficients(1))*geodesic_distance/num_bins/tr_hcp;
+
+
 %% save generated matrices
-save('/path/to/mats/results.mat','locs','tw1','idx_tem_prin','rval_prin_2');
+save('/path/to/mats/results.mat','locs','tw1','idx_tem_prin','rval_prin_2','sped_seg');
 
 
 
