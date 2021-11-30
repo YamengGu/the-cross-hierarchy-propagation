@@ -1,9 +1,9 @@
 
 
-%% calculate time-position correlation along a specific brain map
+%% calculate time-position graph, time-position correlation, and speed of propagation along a specific brain map
 clear all;
 clc;
-load('/path/to/pg1.mat'); % load the brain map: pg1
+load('/path/to/pg1.mat'); % load the brain map: pg1 (principal delay profile)
 
 %% load data
 system('wb_command -cifti-smoothing input_data.dtseries.nii 2 2 COLUMN input_data_smoothed.dtseries.nii -left-surface /path/to/surf_structure/S900.L.inflated_MSMAll.32k_fs_LR.surf.gii -right-surface /path/to/surf_structure/S900.R.inflated_MSMAll.32k_fs_LR.surf.gii'); % spatially smoothing input data
