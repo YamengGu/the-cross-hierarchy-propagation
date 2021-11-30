@@ -13,6 +13,7 @@ cal_corr_seg_human.m: the script to project human input data onto a direction an
 cal_corr_seg_monkey.m: the script to project monkey input data onto a direction and calcualte time-position graph and correlation across time segments.  
 cal_pd.m: the script to calculate the principal delay profile.  
 cal_rescaled_pd.m: the script to calculate the rescaled principal dealy profile, which is to convert principal delay profile from an arbitrary unit to the unit of second.
+
 FT_Filter_mulch2: filtering signal.  
 function inpaint_nans can be found at https://www.mathworks.com/matlabcentral/fileexchange/4551-inpaint_nans.
 
