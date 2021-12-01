@@ -50,13 +50,11 @@ for li = 1:size(seg_all,2)
     end    
 end
 
-% apply svd
+% apply svd to extract the principal delay profile (pd)
 delay_test3 = seg_all2 - repmat(mean(seg_all2),size(seg_all,1),1);
 [U,S,V] = svd(delay_test3);
-pd= zeros(size(U,1),size(V,1));
-for li = 1:size(pd,2)
-pd(:,li) = U(:,li)*S(li,li)*abs(V(:,li));     
-end
+pd= U(:,1);
+
 
 % variance explained for each components
 temp2 = diag(S);
